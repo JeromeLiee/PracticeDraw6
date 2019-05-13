@@ -37,12 +37,21 @@ public class Practice08ObjectAnimatorView extends View {
         paint.setTextAlign(Paint.Align.CENTER);
     }
 
+    public float getProgress() {
+        return progress;
+    }
+
+    public void setProgress(float progress) {
+        this.progress = progress;
+        invalidate();
+    }
+
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        float centerX = getWidth() / 2;
-        float centerY = getHeight() / 2;
+        float centerX = getWidth() / 2f;
+        float centerY = getHeight() / 2f;
 
         paint.setColor(Color.parseColor("#E91E63"));
         paint.setStyle(Paint.Style.STROKE);
